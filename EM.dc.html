@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#FFFFFF}
+  body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  input{font:inherit}
+  ::selection{background:#211E19;color:#F2EEE6}
+  @keyframes emFade{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  @keyframes emFadeSlow{from{opacity:0}to{opacity:1}}
+  @keyframes emHint{0%,45%{opacity:0}100%{opacity:.55}}
+  @keyframes emBreath{0%,100%{opacity:.78}50%{opacity:1}}
+  @keyframes emKen{from{transform:scale(1)}to{transform:scale(1.06)}}
+  @keyframes emReveal{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+  [data-reveal]{animation:emReveal 1s cubic-bezier(.2,.7,.25,1) both}
+  @supports (animation-timeline:view()){
+    [data-reveal]{animation-timeline:view();animation-range:entry 4% cover 24%}
+  }
+  @media (prefers-reduced-motion:reduce){
+    [data-reveal]{animation:none;opacity:1;transform:none}
+  }
+</style>
+</helmet>
+
+<div style="min-height:100dvh;background:#FFFFFF;color:#211E19;font-family:'Jost',sans-serif;overflow-x:hidden;position:relative">
+
+  <sc-if value="{{ showGateway }}" hint-placeholder-val="{{ true }}">
+    <div data-screen-label="Acceso" style="position:relative;min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;text-align:center;animation:emFadeSlow 1.3s ease both">
+      <div onClick="{{ openForm }}" style="{{ monoStyle }}">EM</div>
+      <sc-if value="{{ showHint }}" hint-placeholder-val="{{ true }}">
+        <div style="{{ hintStyle }}">Toque para entrar</div>
+      </sc-if>
+      <form onSubmit="{{ submit }}" style="{{ formStyle }}">
+        <div style="margin-bottom:30px;text-align:left">
+          <label style="display:block;font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:#9A8453;margin-bottom:11px">Nombre</label>
+          <input value="{{ name }}" onChange="{{ onName }}" autocomplete="off" autocapitalize="off" style="{{ inputStyle }}" style-focus="border-bottom-color:#9A8453"/>
+        </div>
+        <div style="margin-bottom:8px;text-align:left">
+          <label style="display:block;font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:#9A8453;margin-bottom:11px">Llave</label>
+          <input value="{{ key }}" onChange="{{ onKey }}" type="password" autocomplete="off" style="{{ inputStyle }}" style-focus="border-bottom-color:#9A8453"/>
+        </div>
+        <div style="{{ errStyle }}">{{ error }}</div>
+        <button type="submit" style="width:100%;margin-top:6px;background:transparent;border:1px solid rgba(33,30,25,.32);color:#211E19;font-family:'Jost';font-size:11px;letter-spacing:.34em;text-transform:uppercase;padding:18px;cursor:pointer;transition:all .55s ease" style-hover="background:#211E19;color:#F2EEE6;border-color:#211E19">Entrar</button>
+      </form>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ showUniversos }}" hint-placeholder-val="{{ true }}">
+    <div data-screen-label="Experiencias" style="animation:emFadeSlow 1.2s ease both">
+      <div data-reveal="1" style="padding:clamp(56px,15vh,128px) 24px clamp(40px,9vh,76px);text-align:center">
+        <div style="font-size:10px;letter-spacing:.42em;text-transform:uppercase;color:#9A8453;margin-bottom:24px">EM &middot; Círculo Privado</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(30px,8vw,48px);line-height:1.18;color:#211E19;max-width:640px;margin:0 auto">{{ greeting }}</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(17px,4.6vw,21px);color:#7A7468;margin-top:18px">Cinco experiencias. Acceso reservado.</div>
+        <div style="width:1px;height:54px;background:rgba(33,30,25,.2);margin:38px auto 0"></div>
+      </div>
+
+      <sc-for list="{{ universes }}" as="u" hint-placeholder-count="5">
+        <section onClick="{{ u.enter }}" style="position:relative;height:clamp(460px,84dvh,860px);overflow:hidden;cursor:pointer;display:flex;align-items:flex-end;margin:0 clamp(0px,5vw,56px) clamp(46px,9vw,96px);border-radius:2px">
+          <div style="{{ u.imgStyle }}"></div>
+          <div style="{{ grainStyle }}"></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(18,15,11,.56) 0%, rgba(18,15,11,.14) 40%, rgba(18,15,11,0) 72%)"></div>
+          <div data-reveal="1" style="position:relative;padding:clamp(30px,7vw,66px);max-width:660px">
+            <div style="font-size:11px;letter-spacing:.42em;color:rgba(244,241,234,.82);margin-bottom:16px">{{ u.idx }}</div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(42px,12vw,90px);line-height:.98;color:#F4F1EA;margin:0">{{ u.name }}</h2>
+            <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(18px,5vw,25px);line-height:1.4;color:rgba(244,241,234,.88);margin:18px 0 0;max-width:30ch">{{ u.essence }}</p>
+            <div style="display:flex;align-items:center;gap:13px;margin-top:30px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#F4F1EA">Explorar <span style="display:inline-block;width:38px;height:1px;background:rgba(244,241,234,.72)"></span></div>
+          </div>
+        </section>
+      </sc-for>
+
+      <div style="text-align:center;padding:clamp(56px,11vh,100px) 24px">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:30px;color:#211E19;letter-spacing:.06em">EM</div>
+        <button onClick="{{ salir }}" style="margin-top:22px;background:none;border:none;font-family:'Jost';font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:#7A7468;cursor:pointer">Salir</button>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ showStory }}" hint-placeholder-val="{{ true }}">
+    <div data-screen-label="Historia" style="animation:emFadeSlow .9s ease both;min-height:100dvh;display:flex;flex-direction:column">
+      <div style="position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:15px 20px;background:#FFFFFF;border-bottom:1px solid rgba(33,30,25,.12)">
+        <button onClick="{{ gotoUniversos }}" style="display:inline-flex;align-items:center;gap:10px;background:none;border:none;font-family:'Jost';font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#211E19;cursor:pointer;padding:6px 0">&larr; Experiencias</button>
+        <span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:#7A7468">{{ universeLabel }}</span>
+      </div>
+
+      <div style="position:relative;height:clamp(320px,54dvh,660px);overflow:hidden">
+        <div style="{{ story.heroImgStyle }}"></div>
+        <div style="{{ grainStyle }}"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(18,15,11,.42), rgba(18,15,11,0) 55%)"></div>
+        <div style="position:absolute;left:0;bottom:0;padding:18px 22px"><span style="font-family:'Courier New',monospace;font-size:10px;letter-spacing:.16em;color:rgba(244,241,234,.82)">EM &middot; ARCHIVO</span></div>
+      </div>
+
+      <article style="max-width:660px;width:100%;margin:0 auto;padding:clamp(44px,9vw,76px) 24px 8px">
+        <div style="font-size:11px;letter-spacing:.36em;text-transform:uppercase;color:#9A8453;margin-bottom:24px">{{ eyebrow }}</div>
+        <h1 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(36px,9.5vw,72px);line-height:1.02;color:#211E19;margin:0">{{ story.title }}</h1>
+        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:clamp(19px,5.4vw,27px);line-height:1.42;color:#4A453D;margin:24px 0 0">{{ story.subtitle }}</p>
+        <div style="display:flex;align-items:center;gap:13px;margin-top:28px"><span style="width:30px;height:1px;background:#9A8453"></span><span style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#7A7468">{{ story.location }}</span></div>
+
+        <div style="margin-top:clamp(42px,9vw,66px)">
+          <sc-for list="{{ story.blocks }}" as="block" hint-placeholder-count="3">
+            <div data-reveal="1" style="margin-bottom:clamp(34px,7vw,48px)">
+              <sc-if value="{{ block.hasHead }}" hint-placeholder-val="{{ true }}">
+                <div style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#9A8453;margin-bottom:15px">{{ block.head }}</div>
+              </sc-if>
+              <p style="font-family:'Jost';font-weight:400;font-size:clamp(16px,4.4vw,18px);line-height:1.85;color:#2E2B24;margin:0;text-wrap:pretty">{{ block.text }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </article>
+
+      <div style="position:relative;height:clamp(280px,46dvh,560px);overflow:hidden;margin-top:10px">
+        <div style="{{ story.secImgStyle }}"></div>
+        <div style="{{ grainStyle }}"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(18,15,11,.4), rgba(18,15,11,0) 45%)"></div>
+        <div style="position:absolute;left:0;bottom:0;padding:18px 22px"><span style="font-family:'Courier New',monospace;font-size:10px;letter-spacing:.16em;color:rgba(244,241,234,.82)">EM &middot; SELECCIÓN</span></div>
+      </div>
+
+      <div data-reveal="1" style="max-width:660px;width:100%;margin:0 auto;padding:clamp(46px,9vw,76px) 24px clamp(58px,11vw,96px);text-align:center">
+        <div style="width:42px;height:1px;background:#9A8453;margin:0 auto 30px"></div>
+        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(17px,4.6vw,21px);color:#7A7468;margin:0 0 34px;line-height:1.5">Una selección reservada para el círculo EM.</p>
+        <button onClick="{{ openInterest }}" style="display:inline-flex;align-items:center;justify-content:center;background:transparent;border:1px solid rgba(33,30,25,.34);color:#211E19;font-family:'Jost';font-size:12px;letter-spacing:.3em;text-transform:uppercase;padding:19px 36px;cursor:pointer;transition:all .55s ease" style-hover="background:#211E19;color:#F2EEE6;border-color:#211E19">Quiero saber más</button>
+      </div>
+
+      <div style="position:sticky;bottom:0;z-index:20;display:flex;align-items:stretch;background:#FFFFFF;border-top:1px solid rgba(33,30,25,.16)">
+        <button onClick="{{ prev }}" style="{{ prevStyle }}">&larr; Anterior</button>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 18px;font-family:'Jost';font-size:11px;letter-spacing:.22em;color:#9A8453;white-space:nowrap">{{ progress }}</div>
+        <button onClick="{{ next }}" style="{{ nextStyle }}">Siguiente &rarr;</button>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ showInterest }}" hint-placeholder-val="{{ true }}">
+    <div onClick="{{ closeInterest }}" style="position:fixed;inset:0;z-index:50;background:rgba(22,18,13,.62);display:flex;align-items:center;justify-content:center;padding:24px;animation:emFadeSlow .5s ease both">
+      <div onClick="{{ stop }}" style="background:#FFFFFF;max-width:440px;width:100%;padding:clamp(38px,9vw,58px);text-align:center;animation:emFade .6s ease both">
+        <div style="font-size:10px;letter-spacing:.42em;text-transform:uppercase;color:#9A8453;margin-bottom:22px">EM</div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(26px,7vw,36px);line-height:1.1;color:#211E19;margin:0 0 18px">Quiero saber más</h3>
+        <p style="font-family:'Jost';font-weight:400;font-size:14px;line-height:1.75;color:#4A453D;margin:0 0 8px">Gracias por su interés en <em style="font-family:'Cormorant Garamond',serif;font-size:17px;color:#211E19">{{ interestTitle }}</em>.</p>
+        <p style="font-family:'Jost';font-weight:300;font-size:13px;line-height:1.75;color:#7A7468;margin:0 0 32px">Un asesor de EM se pondrá en contacto de forma privada y sin compromiso.</p>
+        <a href="{{ wa }}" target="_blank" rel="noopener" style="display:block;background:#211E19;color:#F2EEE6;font-family:'Jost';font-size:11px;letter-spacing:.3em;text-transform:uppercase;padding:17px;text-decoration:none;margin-bottom:14px">Iniciar conversación</a>
+        <button onClick="{{ closeInterest }}" style="background:none;border:none;font-family:'Jost';font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:#7A7468;cursor:pointer;padding:8px">Cerrar</button>
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { view:'door', phase:'mono', name:'', key:'', error:'', authed:false, member:'', universe:null, story:0, showInterest:false };
+
+  DATA = [
+    { name:'Arquitectura e Inversión', essence:'Patrimonio que se hereda, no que se adquiere.', light:'#CFC8BB', deep:'#8C8474', stories:[
+      { title:'Casa Ladera', subtitle:'Una residencia esculpida en la roca de un valle privado.', location:'Valle de Bravo, México', heroCaption:'RESIDENCIA · LUZ DE LA TARDE — FOTOGRAFÍA', secCaption:'DETALLE · PIEDRA Y MADERA', blocks:[
+        { head:'El origen', text:'Durante décadas, esta ladera fue únicamente roca, encino y silencio. La familia que la custodia decidió no domesticarla, sino habitarla dejando la menor huella posible.' },
+        { head:'El lugar', text:'La casa no se impone sobre el paisaje: lo escucha. Sus muros de piedra extraída del propio terreno guardan el calor del día y lo devuelven cuando la noche cae sobre el lago.' },
+        { head:'Por qué pertenece a EM', text:'No la define su superficie ni sus vistas, sino su permanencia. Es de esas propiedades que no cambian de manos por dinero, sino por afinidad.' }
+      ]},
+      { title:'Hacienda del Carmen', subtitle:'Cuatro siglos de historia, restaurados con mano contemporánea.', location:'San Miguel de Allende, Guanajuato', heroCaption:'PATIO PRINCIPAL · CANTERA — FOTOGRAFÍA', secCaption:'GALERÍA · ARCOS ORIGINALES', blocks:[
+        { head:'El origen', text:'Fue casa de campo, después beneficio de minería y, durante un tiempo, ruina hermosa. Cada capa de su historia sigue presente en los muros que hoy se restauran sin borrarlas.' },
+        { head:'La intervención', text:'Un solo despacho de arquitectura ha trabajado la propiedad durante seis años, con una instrucción: no añadir nada que no pudiera retirarse sin dejar cicatriz.' },
+        { head:'Por qué pertenece a EM', text:'Pocas veces una propiedad reúne escala, historia y discreción. Ésta es una de ellas, y nunca ha figurado en una lista pública.' }
+      ]}
+    ]},
+    { name:'Viñedos', essence:'La paciencia de la tierra, medida en cosechas.', light:'#BCB18C', deep:'#71704D', stories:[
+      { title:'Finca Tres Vientos', subtitle:'Veinte hectáreas de viñedo joven sobre un suelo antiguo.', location:'Valle de Guadalupe, Baja California', heroCaption:'VIÑEDO AL AMANECER · NIEBLA — FOTOGRAFÍA', secCaption:'HILERAS · TIERRA GRANÍTICA', blocks:[
+        { head:'La tierra', text:'El granito descompuesto y la brisa del Pacífico hacen de este valle uno de los pocos lugares de México donde la vid sufre lo justo para dar algo extraordinario.' },
+        { head:'El proyecto', text:'La finca produce apenas para unas cuantas barricas al año. No busca crecer: busca entenderse mejor con cada cosecha.' },
+        { head:'La oportunidad', text:'Quien se incorpora no compra una marca, sino una participación en una conversación de largo plazo con la tierra.' }
+      ]},
+      { title:'El Majuelo', subtitle:'Un viñedo de herencia que estuvo a punto de desaparecer.', location:'Parras de la Fuente, Coahuila', heroCaption:'CEPAS CENTENARIAS · VERANO — FOTOGRAFÍA', secCaption:'BODEGA SUBTERRÁNEA', blocks:[
+        { head:'La historia', text:'En el valle donde nació la viticultura del continente, unas cepas centenarias sobrevivieron al abandono. Hoy vuelven a dar fruto bajo un cuidado obsesivo.' },
+        { head:'El presente', text:'Cada planta se trabaja a mano. La producción es mínima y, deliberadamente, lo seguirá siendo.' },
+        { head:'Por qué pertenece a EM', text:'Es patrimonio vivo. Pertenecer significa custodiar algo que nos precede a todos.' }
+      ]}
+    ]},
+    { name:'Vinos y Destilados', essence:'Lo que el tiempo decide guardar.', light:'#9A746C', deep:'#503838', stories:[
+      { title:'Reserva 1998', subtitle:'Una sola barrica que esperó veintisiete años.', location:'Cava privada, Querétaro', heroCaption:'BOTELLAS EN PENUMBRA — FOTOGRAFÍA', secCaption:'COPA · LUZ DE VELA', blocks:[
+        { head:'La espera', text:'Fue apartada el año en que se embotelló y no volvió a moverse. Nadie tuvo prisa por abrirla, y ésa es precisamente su virtud.' },
+        { head:'El carácter', text:'El tiempo le dio lo que ninguna técnica puede fabricar: profundidad, calma y una elegancia que no necesita anunciarse.' },
+        { head:'Acceso', text:'Quedan muy pocas botellas, reservadas para quienes entienden que ciertas cosas no se compran: se reciben.' }
+      ]},
+      { title:'Agave Silvestre', subtitle:'Un lote único de un agave que tardó dos décadas en madurar.', location:'Sierra de Oaxaca', heroCaption:'PALENQUE · HUMO Y BARRO — FOTOGRAFÍA', secCaption:'AGAVE SILVESTRE · DETALLE', blocks:[
+        { head:'El maestro', text:'Una sola familia destila aquí desde hace cinco generaciones, con los mismos hornos de tierra y la misma paciencia.' },
+        { head:'El lote', text:'De este agave silvestre se obtuvieron apenas unas decenas de litros. No habrá un lote idéntico nunca más.' },
+        { head:'Por qué pertenece a EM', text:'Es la expresión más pura de un territorio y de un oficio que se niega a industrializarse.' }
+      ]}
+    ]},
+    { name:'Gastronomía Privada', essence:'Mesas a las que casi nadie se sienta.', light:'#C4A988', deep:'#7C5D43', stories:[
+      { title:'La Mesa de Doce', subtitle:'Una cena que sólo ocurre cuando hay una historia que contar.', location:'Ciudad de México', heroCaption:'MESA SERVIDA · LINO Y LATÓN — FOTOGRAFÍA', secCaption:'COCINA · MANOS DEL CHEF', blocks:[
+        { head:'La idea', text:'No es un restaurante. Es una mesa para doce que se monta unas pocas veces al año, en una casa cuya dirección sólo se comparte el mismo día.' },
+        { head:'La cocina', text:'Un chef sin establecimiento fijo construye cada menú alrededor de un único ingrediente y de las personas que se sentarán a la mesa.' },
+        { head:'La invitación', text:'No se reserva. Se recibe. Y casi siempre, se recuerda durante años.' }
+      ]},
+      { title:'Cena en la Bodega', subtitle:'Bajo tierra, entre barricas, una sola noche.', location:'Valle de Guadalupe, Baja California', heroCaption:'BODEGA · VELAS Y BARRICA — FOTOGRAFÍA', secCaption:'DESCORCHE · AÑADA RESERVA', blocks:[
+        { head:'El lugar', text:'A varios metros bajo el viñedo, donde la temperatura nunca cambia, se monta una mesa larga iluminada únicamente por velas.' },
+        { head:'El momento', text:'Cada plato se acompaña de una añada que normalmente no sale de la cava. El silencio se vuelve parte del menú.' },
+        { head:'Por qué pertenece a EM', text:'Es una experiencia irrepetible, diseñada para muy pocos y nunca anunciada.' }
+      ]}
+    ]},
+    { name:'Arte y Cultura', essence:'Lo que se contempla en privado.', light:'#B4B2AC', deep:'#75787A', stories:[
+      { title:'Colección Privada M.', subtitle:'Acceso reservado a una colección que rara vez se muestra.', location:'Residencia privada, Monterrey', heroCaption:'SALA · OBRA SOBRE CONCRETO — FOTOGRAFÍA', secCaption:'DETALLE · TRAZO Y MATERIA', blocks:[
+        { head:'La colección', text:'Reunida a lo largo de cuarenta años, nunca ha sido expuesta al público. Sus piezas dialogan entre sí en los muros de una casa diseñada para contenerlas.' },
+        { head:'La visita', text:'Un grupo muy reducido es recibido por quien la formó, que presenta cada obra como quien presenta a un viejo amigo.' },
+        { head:'El privilegio', text:'No se trata de ver arte. Se trata de comprender por qué fue elegido.' }
+      ]},
+      { title:'Velada en el Estudio', subtitle:'Una noche en el taller de un artista, antes de que el mundo lo vea.', location:'San Miguel de Allende, Guanajuato', heroCaption:'ESTUDIO · POLVO Y LUZ — FOTOGRAFÍA', secCaption:'OBRA EN PROCESO', blocks:[
+        { head:'El estudio', text:'Entre lienzos a medio terminar y el olor a aguarrás, el trabajo se muestra tal como es: en proceso, vivo, sin curaduría.' },
+        { head:'La conversación', text:'El artista habla sin guion. Lo que se dice esa noche rara vez se repite en una galería.' },
+        { head:'Por qué pertenece a EM', text:'Es el momento más honesto del arte, y casi nadie llega a presenciarlo.' }
+      ]}
+    ]}
+  ];
+
+  submit = (e) => {
+    if (e && e.preventDefault) e.preventDefault();
+    const n = (this.state.name || '').trim().toLowerCase();
+    const k = (this.state.key || '').trim();
+    if (n === 'alberto m' && k === 'Max2026') {
+      try { localStorage.setItem('em_authed','1'); localStorage.setItem('em_member', this.state.name.trim()); } catch(_) {}
+      this.setState({ authed:true, view:'universos', error:'', member:this.state.name.trim() });
+      try { window.scrollTo(0,0); } catch(_) {}
+    } else {
+      this.setState({ error:'Acceso denegado. Verifique sus credenciales.' });
+    }
+  };
+
+  componentDidMount(){
+    try {
+      if (localStorage.getItem('em_authed') === '1') {
+        const m = localStorage.getItem('em_member') || '';
+        this.setState({ authed:true, view:'universos', member:m });
+      }
+    } catch(_) {}
+  }
+
+  IMGS = [
+    ['assets/img/beach-villa.png','assets/img/resort-aerial.png','assets/img/hacienda.png','assets/img/white-resort.png'],
+    ['assets/img/vineyard.png','assets/img/wine-picnic.png','assets/img/hacienda.png','assets/img/vineyard.png'],
+    ['assets/img/barrels.png','assets/img/wine-red.png','assets/img/sake.png','assets/img/wine-rose.png'],
+    ['assets/img/dining.png','assets/img/wine-red.png','assets/img/barrels.png','assets/img/foodbar.png'],
+    ['assets/img/gallery.png','assets/img/paintings.png','assets/img/immersive.png','assets/img/paintings.png']
+  ];
+  roman(n){ const r=['','I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII']; return r[n] || (''+n); }
+  grain(){ return "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")"; }
+  imgLayer(url){ return { position:'absolute', inset:0, backgroundImage:'url(' + url + ')', backgroundSize:'cover', backgroundPosition:'center', filter:'saturate(1.04)', transformOrigin:'center', animation:'emKen 30s ease-in-out infinite alternate' }; }
+  toneBg(light, deep, alt){
+    const p1 = alt ? '76% 18%' : '24% 12%';
+    const p2 = alt ? '18% 92%' : '82% 100%';
+    return `radial-gradient(120% 120% at ${p1}, rgba(255,255,255,0.18), rgba(255,255,255,0) 52%), radial-gradient(130% 130% at ${p2}, rgba(0,0,0,0.42), rgba(0,0,0,0) 58%), linear-gradient(158deg, ${light} 0%, ${deep} 100%)`;
+  }
+  go(view, extra){ this.setState(Object.assign({ view }, extra || {})); try { window.scrollTo(0,0); } catch(_) {} }
+
+  renderVals(){
+    const s = this.state, phase = s.phase;
+
+    const monoStyle = {
+      fontFamily:"'Cormorant Garamond', serif", fontWeight:500, lineHeight:1, color:'#211E19',
+      fontSize:'clamp(58px, 19vw, 128px)', letterSpacing:'0.04em',
+      cursor: phase==='mono' ? 'pointer' : 'default', userSelect:'none',
+      transform: phase==='mono' ? 'translateY(0) scale(1)' : 'translateY(clamp(-118px,-13vh,-86px)) scale(0.72)',
+      transition:'transform 1.25s cubic-bezier(.2,.7,.25,1)',
+      animation: phase==='mono' ? 'emBreath 5s ease-in-out infinite' : 'none'
+    };
+    const formStyle = {
+      position:'absolute', left:'50%', top:'53%', width:'min(330px, 84vw)',
+      transform: phase==='form' ? 'translate(-50%, 0)' : 'translate(-50%, 28px)',
+      opacity: phase==='form' ? 1 : 0,
+      pointerEvents: phase==='form' ? 'auto' : 'none',
+      transition:'opacity 1.1s ease .15s, transform 1.2s cubic-bezier(.2,.7,.25,1) .15s'
+    };
+    const inputStyle = { width:'100%', border:'none', borderBottom:'1px solid rgba(33,30,25,0.28)', background:'transparent', padding:'10px 0', fontSize:'16px', fontFamily:"'Jost'", fontWeight:400, color:'#211E19', outline:'none', letterSpacing:'0.02em', borderRadius:0 };
+    const errStyle = { minHeight:'16px', marginTop:'18px', marginBottom:'8px', fontFamily:"'Cormorant Garamond', serif", fontStyle:'italic', fontSize:'14px', color:'#A35A4E', opacity: s.error ? 1 : 0, transition:'opacity .45s ease' };
+    const hintStyle = { marginTop:'36px', fontSize:'10px', letterSpacing:'0.34em', textTransform:'uppercase', color:'#9A8453', animation:'emHint 3.6s ease forwards' };
+    const grainStyle = { position:'absolute', inset:0, backgroundImage:this.grain(), backgroundSize:'150px 150px', opacity:0.12, mixBlendMode:'overlay', pointerEvents:'none' };
+
+    const universes = this.DATA.map((u,i) => ({
+      name:u.name, essence:u.essence, idx:this.roman(i+1),
+      imgStyle:this.imgLayer((this.IMGS[i] || [])[0]),
+      enter:() => this.go('story', { universe:i, story:0 })
+    }));
+
+    const cur = s.universe != null ? this.DATA[s.universe] : null;
+    const stRaw = cur ? cur.stories[s.story] : null;
+    let story = null, interestTitle = '';
+    if (stRaw) {
+      interestTitle = stRaw.title;
+      story = {
+        title:stRaw.title, subtitle:stRaw.subtitle, location:stRaw.location,
+        heroCaption:stRaw.heroCaption, secCaption:stRaw.secCaption,
+        heroImgStyle:this.imgLayer((this.IMGS[s.universe] || [])[(s.story * 2) % ((this.IMGS[s.universe] || ['']).length)]),
+        secImgStyle:this.imgLayer((this.IMGS[s.universe] || [])[(s.story * 2 + 1) % ((this.IMGS[s.universe] || ['']).length)]),
+        blocks: stRaw.blocks.map(b => ({ head:b.head, text:b.text, hasHead: !!b.head }))
+      };
+    }
+    const len = cur ? cur.stories.length : 0;
+    const canPrev = s.story > 0, canNext = s.story < len - 1;
+    const navBase = { flex:1, minHeight:'64px', background:'none', border:'none', fontFamily:"'Jost'", fontSize:'11px', letterSpacing:'0.24em', textTransform:'uppercase', color:'#211E19', padding:'0 12px' };
+
+    return {
+      showGateway: !s.authed,
+      showUniversos: s.authed && s.view==='universos',
+      showStory: s.authed && s.view==='story' && !!story,
+      monoStyle, formStyle, inputStyle, errStyle, hintStyle, grainStyle,
+      showHint: phase==='mono',
+      name:s.name, key:s.key, error:s.error || '',
+      onName:e => this.setState({ name:e.target.value }),
+      onKey:e => this.setState({ key:e.target.value }),
+      openForm:() => { if (this.state.phase==='mono') this.setState({ phase:'form' }); },
+      submit:this.submit,
+      greeting: s.member ? ('Te damos la bienvenida, ' + s.member.split(' ')[0]) : 'Te damos la bienvenida',
+      universes,
+      salir:() => { try { localStorage.removeItem('em_authed'); } catch(_) {} this.setState({ authed:false, view:'door', phase:'mono', name:'', key:'', error:'', universe:null, story:0 }); try { window.scrollTo(0,0); } catch(_) {} },
+      story, interestTitle,
+      universeLabel: cur ? cur.name : '',
+      eyebrow: cur ? cur.name : '',
+      progress: cur ? (this.roman(s.story+1) + '  /  ' + this.roman(len)) : '',
+      prevStyle: Object.assign({}, navBase, { borderRight:'1px solid rgba(33,30,25,0.16)', cursor: canPrev ? 'pointer' : 'default', opacity: canPrev ? 1 : 0.3 }),
+      nextStyle: Object.assign({}, navBase, { borderLeft:'1px solid rgba(33,30,25,0.16)', cursor: canNext ? 'pointer' : 'default', opacity: canNext ? 1 : 0.3 }),
+      prev:() => { if (this.state.story > 0) this.go('story', { story:this.state.story - 1 }); },
+      next:() => { const c = this.DATA[this.state.universe]; if (c && this.state.story < c.stories.length - 1) this.go('story', { story:this.state.story + 1 }); },
+      gotoUniversos:() => this.go('universos', {}),
+      openInterest:() => this.setState({ showInterest:true }),
+      closeInterest:() => this.setState({ showInterest:false }),
+      showInterest:s.showInterest,
+      stop:e => { e.stopPropagation(); },
+      wa: 'https://wa.me/5210000000000?text=' + encodeURIComponent('Hola, escribo desde EM. Me interesa: ' + (interestTitle || ''))
+    };
+  }
+}
+</script>
+</body>
+</html>

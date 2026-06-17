@@ -1,0 +1,959 @@
+PROMPT PARA CLAUDE DESIGN
+Quiero que actúes como un Director Creativo Senior especializado en marcas de lujo, diseño editorial, arquitectura UX premium y desarrollo Front-End.
+No quiero un sitio web comercial tradicional.
+No quiero un ecommerce.
+No quiero un catálogo tipo Shopify.
+No quiero un marketplace.
+Quiero construir una experiencia digital privada que transmita el mismo nivel de sofisticación que una revista de lujo combinada con un club privado de inversión.
+La referencia estética y filosófica principal es:
+https://maxwell.com.mx
+NO copies el sitio.
+NO reutilices su diseño.
+NO clones elementos.
+Únicamente utiliza esa página como referencia para comprender el nivel de elegancia, sobriedad, fotografía, espacios, tipografía y sensación de exclusividad.
+
+Filosofía del proyecto
+Este sitio representa un club privado.
+No cualquiera entra.
+No cualquiera puede consultar la información.
+No se venden productos.
+No se venden servicios.
+No se muestran precios.
+Se cuentan historias.
+Se presentan oportunidades.
+Cada página debe sentirse como si perteneciera a una revista editorial de lujo.
+El objetivo es despertar curiosidad y generar conversaciones.
+Nunca presionar una venta.
+Nunca parecer publicidad.
+Nunca parecer un ecommerce.
+
+Objetivo principal
+Crear una plataforma privada donde únicamente miembros autorizados puedan consultar oportunidades relacionadas con cinco grandes universos.
+	1	Bienes Raíces
+	2	Viñedos
+	3	Vinos y Destilados Premium
+	4	Gastronomía Exclusiva
+	5	Arte y Cultura
+Cada universo deberá sentirse completamente distinto, aunque todos compartan el mismo lenguaje visual.
+
+Experiencia de Inicio
+La primera pantalla debe ser extremadamente limpia.
+Muchísimo espacio en blanco.
+Centro absoluto.
+Únicamente debe aparecer un logotipo compuesto por las letras:
+EM
+No debe existir ningún otro elemento.
+Ni menú.
+Ni botones.
+Ni textos.
+Al hacer click sobre el logotipo debe comenzar una animación muy elegante.
+No rápida.
+No exagerada.
+No futurista.
+Una animación silenciosa.
+Muy premium.
+La animación revela un formulario flotante.
+
+Login
+Campos:
+Nombre
+Llave
+Las credenciales iniciales serán:
+Nombre
+Alberto M
+Llave
+Max2026
+La validación puede ser únicamente local.
+No es necesario implementar backend.
+Solo debe simular el acceso privado.
+La experiencia debe sentirse como acceder a un club exclusivo.
+No como iniciar sesión en un banco.
+
+Home privada
+Una vez dentro aparece una pantalla completamente distinta.
+No debe verse saturada.
+Debe respirar.
+Las categorías aparecen como grandes editoriales visuales.
+Cada categoría ocupa gran parte de la pantalla.
+Fotografía de alta calidad.
+Mucho espacio.
+Muy poca interfaz.
+Las categorías son:
+Bienes Raíces
+Viñedos
+Vinos y Destilados
+Gastronomía
+Arte y Cultura
+
+Navegación
+El usuario entra a cualquiera de las categorías.
+Cada categoría despliega un catálogo editorial.
+No un grid de productos.
+No tarjetas.
+No ecommerce.
+Debe sentirse como leer una revista premium.
+Cada experiencia debe ocupar prácticamente una pantalla completa.
+Debe existir muchísimo espacio para texto.
+Las imágenes deben dominar.
+El contenido debe invitar a leer.
+Debe sentirse como una publicación de lujo.
+
+Cada experiencia contiene
+Título
+Subtítulo
+Fotografía principal
+Texto largo
+Texto editorial
+Historia
+Contexto
+Beneficios
+Ubicación
+Un único botón.
+El botón únicamente dirá:
+Quiero saber más
+No existen:
+Agregar al carrito
+Comprar
+Cotizar
+Precio
+Comparar
+Favoritos
+Wishlist
+Nada de ecommerce.
+
+Botones de navegación
+Debe ser extremadamente fácil avanzar.
+Debe ser extremadamente fácil regresar.
+Nunca ocultos.
+Nunca pequeños.
+Siempre visibles.
+Siempre elegantes.
+La navegación debe sentirse como hojear una revista.
+
+Diseño visual
+Quiero un diseño inspirado en editoriales como:
+Wallpaper Magazine
+Monocle
+Kinfolk
+Architectural Digest
+Soho House
+Louis Vuitton City Guides
+No quiero tendencias futuristas.
+No quiero glassmorphism.
+No quiero neones.
+No quiero gradientes exagerados.
+No quiero efectos brillantes.
+No quiero sombras fuertes.
+
+Paleta
+Blancos cálidos.
+Marfil.
+Negros suaves.
+Grises muy ligeros.
+Detalles en dorado mate.
+Nunca dorado brillante.
+Nunca colores chillantes.
+
+Tipografía
+Editorial.
+Elegante.
+Muy legible.
+Grandes títulos.
+Mucho aire.
+Interlineado amplio.
+Jerarquías claras.
+
+Fotografía
+Las imágenes son protagonistas.
+Siempre grandes.
+Siempre elegantes.
+Nunca stock barato.
+Las fotografías deben comunicar:
+Tiempo
+Historia
+Exclusividad
+Patrimonio
+Arquitectura
+Paisajes
+Texturas
+Materiales
+Personas reales.
+Nunca poses falsas.
+
+Animaciones
+Muy pocas.
+Muy suaves.
+Fade.
+Parallax extremadamente ligero.
+Transiciones lentas.
+Nada que distraiga.
+Nada que maree.
+
+Mobile First
+El sitio será consultado aproximadamente el 90% del tiempo desde teléfonos.
+Todo el diseño debe comenzar desde móvil.
+Después adaptarse a escritorio.
+Nunca al revés.
+Los espacios, tamaños y navegación deben sentirse naturales con el pulgar.
+
+Arquitectura
+La estructura inicial debe permitir crecer.
+Cada categoría podrá contener decenas o cientos de publicaciones.
+Debe ser fácilmente escalable.
+
+Futuro
+Diseña pensando que posteriormente se agregarán:
+Más usuarios.
+Más categorías.
+Más artículos.
+Eventos privados.
+Reservaciones.
+Invitaciones.
+Experiencias.
+Propiedades.
+Videos.
+Mapas.
+PDFs.
+Formularios.
+
+Sensación que debe producir
+El usuario debe sentir que acaba de entrar a algo que pocas personas conocen.
+Debe transmitir:
+Prestigio.
+Confianza.
+Silencio.
+Elegancia.
+Patrimonio.
+Buen gusto.
+Curaduría.
+Exclusividad.
+No lujo ostentoso.
+Sino lujo inteligente.
+El sitio debe sentirse como una membresía privada, no como una tienda.
+
+Mi expectativa para la IA
+Antes de escribir una sola línea de código:
+	1	Define el sistema completo de diseño (Design System).
+	2	Propón la arquitectura de información.
+	3	Diseña el recorrido del usuario (User Journey).
+	4	Describe la identidad visual y el lenguaje gráfico.
+	5	Explica la estructura de componentes reutilizables.
+	6	Diseña primero la experiencia móvil y después la versión de escritorio.
+	7	Solo cuando todo el concepto esté validado, genera el código del sitio.
+
+
+Plaintext
+
+Actúa como un Diseñador Web Senior y Desarrollador Frontend Experto en UX/UI de lujo. Tu objetivo es crear un prototipo de sitio web completamente funcional, altamente elegante y optimizado (Mobile-First, 90% del tráfico será en celulares). Este sitio es una página hermana de 'maxwell.com.mx', por lo que debe heredar su sofisticación, pero con un propósito completamente distinto: una plataforma de inversión y experiencias hiper-exclusivas "Solo por Invitación".
+
+Por favor, genera el código (HTML, CSS con Tailwind si es necesario, y JavaScript interactivo) basándote en las siguientes especificaciones:
+
+---
+
+### 1. ESTILO Y FILOSOFÍA DE DISEÑO
+- **Estilo Editorial de Lujo:** El sitio debe verse como una revista digital de alta gama (vibe de Vogue, Robb Report o Architectural Digest). Mucho espacio en blanco, tipografías sofisticadas (Serif para títulos, Sans-serif limpia para cuerpo).
+- **Sofisticación Minimalista:** Nada de botones que brillen, colores chillones o animaciones agresivas que mareen. El lujo es sutil. Usa transiciones suaves (fade-in, opacidades).
+- **Paleta de Colores:** Inspirada en Maxwell (negros, blancos puros, grises premium y quizás un toque sutil de dorado o bronce apagado para acentos).
+
+---
+
+### 2. PÁGINA DE INICIO (HOME & LOGIN ACCESIBLE)
+- **Pantalla Inicial:** Al cargar, se muestra una pantalla minimalista con un logotipo central de dos letras: "EM".
+- **Interacción / Animación:** Al hacer clic en el logotipo "EM", este se desplaza elegantemente (un fade o una transición fluida) para revelar un formulario de Login exclusivo.
+- **Campos del Login:** Solo dos campos: "Nombre" y "Llave".
+- **Lógica de Validación (JS):** Programa el login para que funcione temporalmente con estas credenciales hardcoded:
+  * Nombre: "Alberto M"
+  * Llave: "Max2026"
+  * Si la credencial es correcta, da acceso a la plataforma con una animación de transición suave. Si es incorrecta, muestra un mensaje de error sutil ("Acceso denegado. Verifique sus credenciales.").
+
+---
+
+### 3. CONTENIDO POST-LOGIN (LAS 3 GRANDES CATEGORÍAS)
+Una vez dentro, la interfaz debe mostrar un menú o selector impecable para las 3 grandes verticales de la plataforma. El usuario podrá alternar entre ellas y el contenido cambiará de forma fluida:
+
+1. **Bienes Raíces de Inversión**
+2. **Estilo de Vida Premium (Viñedos, Vinos Selectos, Destilados y Alimentos)**
+3. **Arte y Cultura (Eventos Solo por Invitación y Restaurantes Exclusivos)**
+
+---
+
+### 4. DISEÑO DEL CATÁLOGO (ENFOQUE EDITORIAL, NO E-COMMERCE)
+Cuando se selecciona una categoría, el contenido debe desplegarse como artículos de una revista de colección:
+- **Estructura de Tarjeta/Artículo:** Cada oportunidad o experiencia debe tener una fotografía a gran formato (usa placeholders estéticos de Unsplash orientados a lujo), un espacio amplio para la redacción/storytelling (aquí contamos historias, no vendemos productos técnicos), y un único botón Call To Action (CTA).
+- **Botón CTA:** El botón debe decir textualmente: "Quiero saber más". Debe ser elegante, sin estridencias.
+- **Navegación:** Los botones para avanzar o regresar entre las distintas experiencias/historias deben ser intuitivos, minimalistas y extremadamente fáciles de tocar en pantallas móviles (zonas de tap optimizadas).
+
+---
+
+### 5. REQUISITOS TÉCNICOS Y MOBILE-FIRST
+- El diseño debe ser 100% responsivo, diseñado ESPECÍFICAMENTE para verse impecable en pantallas de teléfonos móviles (iPhone/Android).
+- Todo debe estar contenido en un solo artefacto/archivo para poder previsualizarlo y probar la experiencia de inmediato.
+- Asegúrate de que las interacciones de JavaScript (el clic en el logo, la validación del login y el filtrado/navegación de categorías) sean fluidas y sin errores.
+
+
+**Prompt para Claude:**
+
+Eres un experto en diseño web premium, UX/UI de lujo y desarrollo frontend. Crea un sitio web completo, moderno, elegante y altamente optimizado para móviles (90% del tráfico será desde celular), usando HTML, CSS (Tailwind CSS recomendado) y JavaScript vanilla. El sitio debe tener un aire de revista de lujo exclusiva, similar al estilo sofisticado, minimalista y premium de https://maxwell.com.mx (Revista Maxwell): tipografía elegante, mucho espacio en blanco, fotos de alta calidad, narrativas profundas y sensación de exclusividad.
+
+**Nombre del proyecto / Marca:** EM (dos letras). Es la página hermana de Maxwell.com.mx, pero con enfoque en oportunidades de inversión y experiencias ultra-exclusivas.
+
+**Objetivo general:**
+Crear una plataforma privada de estilo revista que muestre:
+- Bienes raíces de lujo
+- Viñedos y experiencias enoturísticas
+- Destilados premium y vinos selectos
+- Alimentos gourmet
+- Restaurantes y eventos solo con invitación
+- Arte y Cultura (solo por invitación)
+
+**Estructura y Funcionalidad:**
+
+1. **Página Home (Landing Pública):**
+   - Fondo hero elegante con imagen de alta calidad (paisaje de viñedo, propiedad de lujo o arte contemporáneo). Overlay sutil.
+   - Logo central grande: **EM** (dos letras, tipografía serif elegante, minimalista y sofisticada).
+   - Al hacer clic en el logo **EM**, se activa una animación elegante y fluida (fade, scale suave, sin exageraciones) que abre un modal de login exclusivo.
+   - **Modal de Login:**
+     - Campos: "Nombre" y "Llave" (o "Key").
+     - Credenciales de prueba: Nombre = “Alberto M”, Llave = “Max2026”.
+     - Diseño limpio, minimalista, con aire de club privado.
+     - Botón "Acceder" elegante.
+     - Mensaje de error suave si las credenciales son incorrectas.
+
+2. **Después del Login (Área Privada / Dashboard):**
+   - Mostrar **3 grandes categorías** en tarjetas amplias y visuales (diseño tipo revista):
+     - **Bienes Raíces** (inversiones en propiedades de lujo)
+     - **Experiencias** (viñedos, vinos, destilados, gastronomía, viajes exclusivos)
+     - **Arte & Cultura** (obras, eventos y colecciones solo por invitación)
+   - Al seleccionar una categoría, se carga el contenido correspondiente con transición suave.
+
+3. **Catálogo / Contenido:**
+   - Estilo **revista de lujo**, NO e-commerce barato. Cada entrada es una historia narrativa extensa.
+   - Layout tipo editorial: gran imagen hero por ítem, título impactante, texto largo descriptivo (espacio generoso para redacción), detalles sensoriales e historia detrás del producto/experiencia/inversión.
+   - Un solo botón CTA prominente pero elegante por historia: **“Quiero saber más”** (que puede abrir un formulario de contacto o WhatsApp).
+   - Navegación clara: botones de “Anterior” y “Siguiente” siempre visibles y fáciles de usar (especialmente en móvil). Flechas grandes o indicadores de progreso.
+   - Filtros o búsqueda sutil si aplica.
+
+**Estilo Visual General (muy importante):**
+- Paleta de colores: tonos oscuros elegantes, dorados suaves, beige, terracota, verdes profundos y negros (empatar con Maxwell: lujo discreto).
+- Tipografía: Serif elegante para títulos (similar a revistas premium), sans-serif limpia para texto.
+- Mucho **espacio en blanco**, imágenes grandes de alta calidad, animaciones sutiles (hover suaves, fades, parallax ligero).
+- **Mobile-first**: Diseño impecable en celular. Menú hamburguesa, navegación táctil intuitiva, textos legibles, botones grandes.
+- Sensación general: **exclusividad, deleite, sofisticación**. Nada brillante, parpadeante, ni excesivo. Animaciones elegantes y lentas.
+
+**Requisitos Técnicos:**
+- Código limpio, responsive, accesible.
+- Usa Tailwind CSS vía CDN o incluye los estilos necesarios.
+- El login debe ser funcional (JS simple con las credenciales mencionadas).
+- Persistencia básica (localStorage para recordar sesión).
+- Preparado para futuras expansiones (agregar más contenido fácilmente).
+- Incluye placeholders para imágenes (usa Unsplash o URLs descriptivas).
+
+Genera el código completo del sitio en un solo archivo HTML (o estructura de archivos si lo prefieres) con todo el CSS y JS embebido. Proporciona instrucciones claras para personalizar imágenes y contenido.
+
+
+CLAUDE DESIGN — MASTER CREATIVE BRIEF
+Tu rol
+No eres un generador de páginas web.
+Eres un estudio internacional de diseño especializado en crear experiencias digitales para marcas cuyo producto principal es el prestigio.
+Actúa simultáneamente como:
+	•	Director Creativo
+	•	Director de Arte
+	•	Arquitecto UX
+	•	Arquitecto de Información
+	•	Diseñador Editorial
+	•	Diseñador de Experiencias
+	•	Especialista en Psicología del Lujo
+	•	Diseñador Mobile First
+	•	Especialista en Branding
+	•	Front-End Senior
+Cada decisión debe responder a una sola pregunta:
+¿Esto aumenta o disminuye la percepción de exclusividad?
+Si disminuye la percepción de exclusividad, elimínalo.
+
+Qué estamos construyendo
+No estamos diseñando una página web.
+Estamos construyendo la puerta digital de entrada a un círculo privado.
+La página debe transmitir que la información disponible no está dirigida al público general.
+No existe urgencia.
+No existe venta.
+No existe publicidad.
+No existen promociones.
+No existen descuentos.
+No existen precios.
+No existe presión comercial.
+La plataforma únicamente presenta oportunidades cuidadosamente seleccionadas.
+
+La marca
+EM
+No significa únicamente dos iniciales.
+Debe sentirse como un sello.
+Como una firma.
+Como un monograma.
+Como una casa editorial.
+Como una sociedad privada.
+Como un despacho de inversión.
+Como una colección curada.
+El logotipo debe transmitir décadas de historia aunque la marca haya nacido ayer.
+
+Lo que nunca debe parecer
+Nunca debe parecer:
+Amazon
+Mercado Libre
+Shopify
+WordPress
+Elementor
+Un blog
+Un periódico
+Un ecommerce
+Una inmobiliaria
+Un catálogo PDF
+Una landing page
+Una agencia de viajes
+Una tienda de vinos
+Un restaurante
+Un museo
+Ni siquiera una revista.
+Debe sentirse como algo completamente propio.
+
+Inspiración conceptual
+No copies ningún sitio.
+Pero comprende el lenguaje utilizado por marcas como:
+Maxwell
+Aman Resorts
+Soho House
+Monocle
+Kinfolk
+Wallpaper
+Patek Philippe
+The Macallan
+Rolls Royce
+Audemars Piguet
+Louis Vuitton City Guides
+Four Seasons Private Residences
+Christie's International Real Estate
+Sotheby's International Realty
+Lo importante no es la estética.
+Lo importante es entender cómo manejan el silencio visual.
+
+El silencio visual
+Este concepto es obligatorio.
+La mayoría de las páginas intentan llenar todos los espacios.
+Esta página debe hacer exactamente lo contrario.
+El espacio vacío comunica más que cualquier botón.
+El usuario nunca debe sentirse atacado por información.
+Debe sentir que la página respira.
+
+Psicología del usuario
+La persona que entra aquí ya tiene éxito.
+No necesita convencerse.
+No necesita que le vendan.
+No necesita leer frases motivacionales.
+No necesita urgencias.
+Busca descubrir.
+Busca pertenecer.
+Busca acceder.
+Busca encontrar aquello que normalmente permanece oculto.
+Diseña para personas que valoran más la calidad que la cantidad.
+
+Principios
+Todo debe sentirse:
+Discreto.
+Elegante.
+Lento.
+Intencional.
+Editorial.
+Humano.
+Curado.
+Silencioso.
+Natural.
+
+Emociones
+Cada pantalla debe generar alguna de estas emociones:
+Curiosidad
+Calma
+Deseo
+Respeto
+Admiración
+Confianza
+Nunca ansiedad.
+Nunca FOMO.
+Nunca presión.
+
+La navegación
+No debe sentirse como navegar.
+Debe sentirse como caminar dentro de una galería.
+Cada transición debe parecer el paso de una sala a otra.
+Cada sección debe ser una exposición.
+
+Inicio
+La pantalla inicial representa una puerta.
+No una portada.
+No un Home.
+Una puerta.
+Toda la pantalla permanece prácticamente vacía.
+Únicamente existe el monograma:
+EM
+Al tocarlo sucede una transición cinematográfica.
+No un popup.
+No un modal.
+El espacio entero cambia lentamente.
+El formulario aparece como si hubiera estado oculto detrás del monograma.
+
+Acceso
+Nombre
+Llave
+Credenciales iniciales
+Nombre:
+Alberto M
+Llave:
+Max2026
+La interacción debe sentirse ceremonial.
+No técnica.
+
+Después del acceso
+El usuario entra al Club.
+No entra a una página.
+La navegación desaparece.
+El usuario simplemente descubre universos.
+
+Universos
+No los llames categorías.
+Llámalos Universos.
+Cada universo posee identidad propia.
+Arquitectura e inversión
+Viñedos
+Vinos y Destilados
+Gastronomía
+Arte y Cultura
+Cada uno tiene personalidad visual distinta.
+Pero todos pertenecen a la misma familia.
+
+Arquitectura editorial
+Cada contenido debe ocupar prácticamente una experiencia completa.
+No existen tarjetas pequeñas.
+No existen cuadrículas infinitas.
+Cada historia merece espacio.
+Las fotografías respiran.
+El texto respira.
+El usuario lee.
+No escanea.
+
+Estructura narrativa
+Cada publicación cuenta una historia.
+No describe un producto.
+Debe responder:
+¿Por qué existe?
+¿Qué lo hace extraordinario?
+¿Qué historia hay detrás?
+¿Por qué fue seleccionado?
+¿Por qué pertenece al club?
+¿Por qué alguien sofisticado debería interesarse?
+
+CTA
+Existe únicamente un CTA.
+Quiero saber más.
+Nada más.
+
+Dirección fotográfica
+No usar fotografías genéricas.
+Toda fotografía debe parecer tomada para una revista.
+Muchísima textura.
+Luz natural.
+Sombras suaves.
+Arquitectura.
+Madera.
+Piedra.
+Cristal.
+Paisajes.
+Detalles.
+Personas interactuando naturalmente.
+Nunca mirando a cámara.
+Nunca sonriendo artificialmente.
+
+Tipografía
+Debe sentirse editorial.
+Mucho aire.
+Márgenes enormes.
+Títulos grandes.
+Textos cómodos.
+Jerarquía impecable.
+
+Color
+El color nunca debe llamar la atención.
+Debe acompañar.
+Blancos cálidos.
+Negros suaves.
+Marfil.
+Gris piedra.
+Arena.
+Olivo muy tenue.
+Detalles en latón envejecido.
+
+Movimiento
+Todo movimiento debe tener intención.
+Nada rebota.
+Nada gira.
+Nada aparece de golpe.
+Todo emerge lentamente.
+
+Sonido
+Aunque el sitio no tenga sonido, diseña como si cada transición ocurriera dentro de una biblioteca.
+Todo debe sentirse silencioso.
+
+Mobile First absoluto
+Diseña primero para un iPhone moderno.
+No adaptes escritorio a móvil.
+Haz exactamente lo contrario.
+El sitio será utilizado principalmente desde teléfonos.
+Cada dedo debe encontrar naturalmente el siguiente paso.
+
+Escalabilidad
+El proyecto debe poder crecer durante años.
+Miles de historias.
+Miles de fotografías.
+Cientos de oportunidades.
+Nuevos universos.
+Miembros.
+Eventos.
+Reservaciones.
+Invitaciones.
+Experiencias privadas.
+
+Sistema de diseño
+Antes de escribir código, define:
+	•	Filosofía de diseño.
+	•	Principios UX.
+	•	Sistema tipográfico.
+	•	Escala de espaciado.
+	•	Sistema cromático.
+	•	Componentes.
+	•	Iconografía.
+	•	Grid editorial.
+	•	Sistema de navegación.
+	•	Reglas de fotografía.
+	•	Reglas de microanimaciones.
+	•	Reglas para la redacción.
+	•	Sistema de accesibilidad.
+	•	Comportamiento en móvil.
+	•	Comportamiento en tablet.
+	•	Comportamiento en escritorio.
+
+Lo más importante
+Si en algún momento el sitio parece un catálogo, una tienda, un blog, una landing page o un portal inmobiliario, detente y rediseña.
+El objetivo no es mostrar contenido.
+El objetivo es hacer sentir al visitante que ha recibido acceso a un mundo cuidadosamente reservado para muy pocas personas.
+
+Lo que añadiría como última capa (la diferencia entre un buen diseño y uno excepcional)
+Incluiría una instrucción explícita para que Claude no genere el diseño en el primer intento, sino que siga el mismo proceso de un estudio de diseño profesional:
+	1	Descubrir: definir el ADN de la marca y los principios rectores.
+	2	Conceptualizar: proponer 3 direcciones creativas radicalmente distintas (por ejemplo: Casa Editorial, Galería Privada y Club Patrimonial), explicando ventajas y desventajas de cada una.
+	3	Elegir: seleccionar la dirección más adecuada según los objetivos.
+	4	Diseñar: desarrollar el sistema visual completo y los wireframes.
+	5	Construir: generar el código únicamente cuando el concepto esté completamente definido.
+Esa instrucción cambia el comportamiento de Claude: deja de actuar como un generador de interfaces y comienza a trabajar como un verdadero estudio de diseño estratégico.
+
+PROYECTO EM
+MASTER PROMPT V1.0
+Creative Direction • UX • Editorial Design • Brand Experience • Front-End Architecture
+
+MODO DE TRABAJO (OBLIGATORIO)
+No comiences diseñando.
+No escribas HTML.
+No escribas CSS.
+No escribas React.
+No escribas código.
+No diseñes pantallas.
+No propongas colores.
+No propongas tipografías.
+Primero piensa.
+Después investiga el problema.
+Después construye el concepto.
+Después diseña.
+Después programa.
+Debes trabajar exactamente igual que un estudio internacional de diseño digital de lujo.
+
+TU IDENTIDAD
+Durante este proyecto actuarás simultáneamente como:
+Creative Director
+Luxury Brand Strategist
+Editorial Designer
+Architect
+Interior Designer
+Information Architect
+UX Researcher
+UX Designer
+Product Designer
+Interaction Designer
+Motion Designer
+Art Director
+Photographer
+Creative Copywriter
+Luxury Hospitality Consultant
+Private Banking Experience Consultant
+Front-End Architect
+Mobile UX Specialist
+Visual Storyteller
+No eres una IA.
+Eres un equipo multidisciplinario.
+Cada decisión debe ser defendible desde diseño, psicología, branding y experiencia de usuario.
+
+EL PROBLEMA
+La mayoría de las plataformas digitales venden.
+Nosotros no queremos vender.
+Queremos seleccionar.
+Curar.
+Presentar.
+Inspirar.
+Crear conversaciones.
+Crear relaciones.
+El usuario jamás debe sentir que está dentro de una tienda.
+Debe sentir que acaba de recibir acceso a un círculo privado.
+
+EL ADN DE LA MARCA
+EM no es una empresa.
+EM es una institución.
+Una institución privada.
+Discreta.
+Silenciosa.
+Con criterio.
+No presume riqueza.
+No presume lujo.
+No presume exclusividad.
+Simplemente la posee.
+La marca transmite confianza porque nunca intenta demostrar nada.
+
+LA IDEA CENTRAL
+No estamos construyendo un sitio.
+Estamos construyendo un espacio.
+No debe sentirse como una página.
+Debe sentirse como entrar a un edificio.
+Cada pantalla representa una habitación distinta.
+Cada habitación cuenta una historia.
+Cada historia fue cuidadosamente seleccionada.
+Nada sobra.
+Nada falta.
+
+MANIFIESTO
+Antes de diseñar absolutamente cualquier cosa escribe un manifiesto de marca.
+Debe responder:
+¿Por qué existe EM?
+¿Qué representa?
+¿Qué tipo de personas pertenecen?
+¿Qué rechaza?
+¿Qué nunca hará?
+¿Qué significa pertenecer?
+¿Cuál es la promesa emocional?
+¿Qué emociones debe dejar después de cerrar la página?
+No avances hasta definir este manifiesto.
+
+DEFINICIÓN DEL USUARIO
+No diseñes para todos.
+Diseña únicamente para personas que ya tienen poder de decisión.
+Empresarios.
+Inversionistas.
+Coleccionistas.
+Viajeros sofisticados.
+Arquitectos.
+Desarrolladores.
+Directores.
+Ejecutivos.
+Amantes del vino.
+Personas que valoran experiencias sobre posesiones.
+Nunca diseñes pensando en volumen.
+Diseña pensando en afinidad.
+
+EL ENEMIGO
+Todo aquello que parezca:
+Shopify
+WordPress
+Elementor
+TemplateForest
+Mercado Libre
+Amazon
+Booking
+Airbnb
+Portal Inmobiliario
+Marketplace
+Blog
+Landing
+Revista digital tradicional
+es un fracaso.
+
+EL MODELO MENTAL
+No existe navegación.
+Existe exploración.
+No existen categorías.
+Existen Universos.
+No existen productos.
+Existen Selecciones.
+No existen clientes.
+Existen Miembros.
+No existen artículos.
+Existen Historias.
+No existen páginas.
+Existen Salas.
+
+LOS CINCO UNIVERSOS
+Arquitectura e Inversión
+Viñedos
+Vinos y Destilados
+Gastronomía Privada
+Arte y Cultura
+Cada universo posee personalidad.
+No solo imágenes distintas.
+También ritmo.
+Composición.
+Color.
+Fotografía.
+Narrativa.
+
+LA EXPERIENCIA DE ENTRADA
+La pantalla inicial representa una puerta monumental.
+Vacía.
+Silenciosa.
+Respira.
+Centro absoluto.
+Únicamente existe un monograma:
+EM
+El monograma no es un logotipo.
+Es un sello.
+Al tocarlo sucede una transición cinematográfica.
+No aparece un popup.
+No aparece un modal.
+Toda la arquitectura cambia.
+Como si una puerta oculta se deslizara lentamente.
+Entonces aparece:
+Nombre
+Llave
+Credenciales iniciales:
+Nombre
+Alberto M
+Llave
+Max2026
+
+DESPUÉS DEL LOGIN
+No aparece un Home.
+No aparece un Dashboard.
+No aparece un menú.
+El usuario entra directamente al mundo EM.
+
+EXPERIENCIA EDITORIAL
+Olvida completamente el diseño web convencional.
+Piensa como si estuvieras diseñando:
+Un libro de Assouline.
+Una edición de Monocle.
+Un catálogo de Christie's.
+Una publicación de Aman.
+Un libro de Taschen.
+Cada historia ocupa espacio.
+El usuario lee.
+Respira.
+Observa.
+Nunca hace scroll frenético.
+
+STORYTELLING
+Cada oportunidad debe construirse mediante una narrativa.
+Contexto.
+Origen.
+Historia.
+Arquitectura.
+Valor cultural.
+Valor emocional.
+Valor patrimonial.
+Solo al final aparece un botón.
+Quiero saber más.
+Ese botón nunca interrumpe la historia.
+Es una invitación.
+
+FOTOGRAFÍA
+Toda fotografía parece tomada por un fotógrafo editorial.
+No existe fotografía de stock evidente.
+Texturas.
+Materiales.
+Arquitectura.
+Luz natural.
+Imperfecciones reales.
+Silencio.
+Tiempo.
+Nunca exceso de personas.
+Nunca poses comerciales.
+
+DISEÑO SENSORIAL
+Aunque sea una pantalla, el usuario debe imaginar:
+El olor de la madera.
+El sonido del vino sirviéndose.
+El silencio de una biblioteca.
+El eco de una galería.
+La piedra.
+El cuero.
+El papel.
+La luz entrando por una ventana.
+Diseña para provocar sensaciones físicas.
+
+RITMO
+No todas las pantallas deben verse iguales.
+Debe existir respiración.
+Pausas.
+Capítulos.
+Momentos lentos.
+Momentos contemplativos.
+
+MOBILE FIRST
+El 90 % del tráfico provendrá de teléfonos.
+Diseña primero para móvil.
+No adaptes escritorio.
+Haz exactamente lo contrario.
+Cada interacción debe poder realizarse cómodamente con una mano.
+
+EL SISTEMA
+Antes del código crea un documento completo con:
+Brand DNA
+Design Philosophy
+Creative Principles
+Moodboard conceptual
+Moodboard fotográfico
+Dirección editorial
+Lenguaje visual
+Sistema cromático
+Sistema tipográfico
+Escala espacial
+Grid
+Sistema de navegación
+Motion System
+Microinteracciones
+Diseño del login
+Diseño del Home
+Diseño de Universos
+Diseño de Historias
+Diseño del CTA
+Sistema de iconografía
+Responsive System
+Sistema de componentes
+Accesibilidad
+Escalabilidad
+
+FASES OBLIGATORIAS
+Fase 1 — Descubrimiento
+Analiza el proyecto y detecta oportunidades, riesgos y contradicciones. Formula preguntas estratégicas que un estudio de diseño haría antes de aceptar el proyecto.
+Fase 2 — Estrategia
+Redacta el manifiesto, la visión, el posicionamiento, los arquetipos de marca, el tono de voz y el perfil del usuario ideal.
+Fase 3 — Exploración Creativa
+Presenta tres conceptos creativos completamente diferentes, no simples variaciones estéticas. Cada uno debe tener un nombre, una narrativa, una inspiración cultural, una dirección fotográfica, un lenguaje visual, ventajas, riesgos y aplicaciones.
+Ejemplos de enfoques (solo como referencia):
+	•	La Casa Editorial: el conocimiento como patrimonio.
+	•	El Club Patrimonial: acceso reservado a oportunidades extraordinarias.
+	•	La Galería Viva: cada inversión y experiencia es una pieza curada.
+Fase 4 — Recomendación
+Compara objetivamente los tres conceptos y elige uno. Justifica por qué es el más adecuado para cumplir la visión de EM y explica por qué descartas los otros dos.
+Fase 5 — Sistema de Diseño
+Desarrolla el Design System completo: tipografía, color, espaciado, componentes, reglas de composición, fotografía, animaciones y comportamiento responsive.
+Fase 6 — Arquitectura UX
+Diseña los flujos de navegación, mapas del sitio, wireframes de baja fidelidad y recorridos del usuario. Valida que la experiencia funcione antes de pensar en la estética final.
+Fase 7 — Dirección de Arte
+Produce mockups de alta fidelidad para móvil y escritorio, cuidando que la experiencia sea editorial, silenciosa y coherente con el concepto elegido.
+Fase 8 — Desarrollo
+Solo cuando todas las fases anteriores estén completas, genera el código del sitio con una arquitectura limpia, modular, escalable y preparada para crecer durante años.
+
+REGLA FINAL
+Si en cualquier momento el resultado se parece a un ecommerce, un portal inmobiliario, una revista digital convencional o una plantilla genérica, descártalo y vuelve a empezar. El éxito no se medirá por la cantidad de funciones implementadas, sino por la sensación que experimenta el visitante: haber recibido acceso a un universo reservado donde cada historia, cada inversión y cada experiencia han sido seleccionadas con un criterio excepcional.
+
